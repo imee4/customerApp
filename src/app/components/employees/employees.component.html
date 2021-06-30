@@ -1,0 +1,46 @@
+<h1 align="center" style="color:rgb(86, 85, 150)">Use Below Form To Add Data</h1>
+<form (ngSubmit)="insertData()">
+
+<div class="input-group mb-3">
+  <input style="background-color:lightgray" type="text" class="form-control" placeholder="id" aria-label="id" aria-describedby="basic-addon1"  name="id" [(ngModel)]="employee.id">
+</div>
+
+<div class="input-group mb-3">
+  <input style="background-color:lightgray"style="background-color:lightgray"type="text" class="form-control" placeholder="name" aria-label="Username" aria-describedby="basic-addon1" name="name" [(ngModel)]="employee.name">
+</div>
+
+<div class="input-group mb-3">
+  <input style="background-color:lightgray"type="text" class="form-control" placeholder="Email@domain.com" aria-label="Server" name="email" [(ngModel)]="employee.email">
+ </div>
+
+<div class="input-group mb-3">
+ <input style="background-color:lightgray" type="text" class="form-control" placeholder="Salary" aria-label="Server" name="salary" [(ngModel)]="employee.salary">
+</div>
+
+<div class="input-group">
+  
+  <button class="form-control" style="background-color:rgb(86, 85, 150)" >Submit</button>
+</div>
+</form>
+
+<strong><hr style="color:rgb(86, 85, 150) " > <h1 align="center" style="color:rgb(86, 85, 150)">Added List</h1><hr style="color:rgb(86, 85, 150)"></strong>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Salary </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        
+        <th scope="row">{{emp.id}}</th>
+        <td>{{emp.name}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.alary}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
