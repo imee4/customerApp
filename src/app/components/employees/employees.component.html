@@ -1,9 +1,7 @@
 <h1 align="center" style="color:rgb(86, 85, 150)">Use Below Form To Add Data</h1>
 <form (ngSubmit)="insertData()">
 
-<div class="input-group mb-3">
-  <input style="background-color:lightgray" type="text" class="form-control" placeholder="id" aria-label="id" aria-describedby="basic-addon1"  name="id" [(ngModel)]="employee.id">
-</div>
+
 
 <div class="input-group mb-3">
   <input style="background-color:lightgray"style="background-color:lightgray"type="text" class="form-control" placeholder="name" aria-label="Username" aria-describedby="basic-addon1" name="name" [(ngModel)]="employee.name">
@@ -31,6 +29,8 @@
         <th scope="col">Name</th>
         <th scope="col">Email</th>
         <th scope="col">Salary </th>
+        <th scope="col">Action </th>
+
       </tr>
     </thead>
     <tbody>
@@ -39,7 +39,9 @@
         <th scope="row">{{emp.id}}</th>
         <td>{{emp.name}}</td>
         <td>{{emp.email}}</td>
-        <td>{{emp.alary}}</td>
+        <td>{{emp.salary}}</td>
+        <td><button class="btn btn-danger btn-sm" (click)="deleteData(emp.id)">Delete</button></td>
+        
       </tr>
       
     </tbody>
