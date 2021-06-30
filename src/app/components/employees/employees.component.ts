@@ -34,5 +34,18 @@ insertData(){
   })
 
 }
+deleteData(id: string){
+
+this.dataService.deleteData(id).subscribe(res => { 
+
+  this.getEmployeesData();
+
+})
 
 }
+
+}
+function id(id: any) {
+  throw new Error('Function not implemented.');
+}
+
